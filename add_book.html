@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Editing of books database (admin only)</title>
+<style>
+  @import url('styles.css');
+</style>
+</head>
+<body style="background: url(fon.png) top left repeat-x">
+  <form action="add_book.php" method="POST" enctype="multipart/form-data">
+    <br>
+    <label for="au1_fname">First author name:</label> 
+    <input type="text" name="au1_fname" size="32" required="required" /><br>
+    <label for="au1_lname">First author last name:</label> 
+    <input type="text" name="au1_lname" size="32" required="required" /><br>
+    <label for="au2_fname">Second author name:</label> 
+    <input type="text" name="au2_fname" size="32" /><br>
+    <label for="au2_lname">Second author last name:</label> 
+    <input type="text" name="au2_lname" size="32" /><br>
+    <label for="au3_fname">Third author name:</label> 
+    <input type="text" name="au3_fname" size="32" ><br>
+    <label for="au3_lname">Third author last name:</label> 
+    <input type="text" name="au3_lname" size="32" ><br><br>
+
+    <label for="title">Book title:</label>
+    <input type="text" name="title" size="64" required="required" /><br><br>
+    
+    <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+    <label for="cover">Book cover image:</label> 
+    <input type="file" name="cover" size="32"/><br>
+
+    <label for="title">Book group (genre):</label>
+    <input list="genres" name="genre" size="32" required="required" />
+      <datalist id="genres">
+        <option>Web development</option>
+        <option>Schematic</option>
+        <option>Mathematic</option>
+      </datalist><br>
+        
+    <label for="year">Year of book production:</label> 
+    <input type="text" name="year" size="4" /><br>
+
+    <label for="abstract">Abstract:</label><br> 
+    <textarea name="abstract" cols="64" rows="5"></textarea><br>
+
+    <label for="price">Price:</label> 
+    <input type="text" name="price" size="5" required="required" /><br>
+
+    <input type="checkbox" name="have"> We have this book <br>
+    
+    <input type="reset" value="Reset" />   <input type="submit" name="add_book" value="Add book"/> 
+  </form>  
+</body>
+</html>
