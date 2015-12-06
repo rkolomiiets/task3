@@ -16,12 +16,38 @@ label { font-family: Georgia; }
 a { font-family: Georgia; }
 form { position: inherit; }
 
-.inline { display: inline-block; }
-
-.cover {
-	width: 82px;
+.book_info { 
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
-
+.inline { 
+	display: inline-block;
+}
+.cover{
+    width: 100px;
+    align: left;
+}
+.title {
+	font-family: Georgia; 
+	font-weight: bold;
+	padding-left: 10px;
+}	
+.authors {
+	font-family: Verdana; 
+	font-size: medium;
+	padding-left: 10px;
+}
+.year {
+	font-family: Georgia;
+	font-size: medium;
+	padding-left: 10px;
+}
+.price {
+	font-family: Georgia;
+	font-size: medium;
+	font-weight: bold;
+	padding-left: 10px;
+}
 .button {
 	position: relative;
 	width: 155px;

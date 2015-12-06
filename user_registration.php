@@ -40,7 +40,7 @@
                       @email = '$user_email',
                       @admin = 'false',
                       @ava = 'defaultava.jpg',
-                      @date = NULL,
+                      @date = '',
                       @status = ''";
         $result = $connection->query($query);
         if (!$result) {die("1. " . $connection->error . ". Error code: " . $connection->errno);}

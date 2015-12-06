@@ -29,7 +29,7 @@ if (!empty($_POST)) {
 }
 
 // получение изображения обложки
-if (!empty($_FILES)) {
+/* if (!empty($_FILES)) {
   @is_uploaded_file($_FILES['cover']['tmp_name']) or die('Incorrect file!');
   @getimagesize($_FILES['cover']['tmp_name']) or die('Your file isn\'t an image');
   if (!isset($max_file_size)) {die('No $_POST!');}
@@ -38,7 +38,7 @@ if (!empty($_FILES)) {
   @move_uploaded_file($_FILES['cover']['tmp_name'], $upload_filename) or die('Can\'t load your file here');
   $img_name = $_FILES['cover']['name'];
   // echo "<img src=\"$img_name\"> <br>";
-}
+} */
 
 // вставка данных книги в БД
 $query = 'PREPARE statement FROM "INSERT INTO books VALUES(?,?,?,?,?,?,?,?,?,?)"'; 
@@ -52,7 +52,7 @@ $query = "SET @bid = NULL,
               @genre = '$genre',
               @subgenre = '',
               @price = '$price',
-              @date = NULL,
+              @date = '',
               @have = '$have'";
 // echo $query;
 $result = $connection->query($query);
